@@ -1,0 +1,19 @@
+{
+  "name": "module-federation-runtime-error",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "host",
+    "remote"
+  ],
+  "scripts": {
+    "dev": "concurrently npm:serve:host npm:preview:remote",
+    "serve:host": "cd host && npm run dev",
+    "preview:remote": "cd remote && npm run build && npm run preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
